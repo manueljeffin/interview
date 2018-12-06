@@ -35,8 +35,8 @@ public class LongestIncreasingSubsequence {
         
         for(int i=1; i < arr.length; i++){
             for(int j=0; j < i; j++){
-                if(arr[i] > arr[j]){
-                    if(T[j] + 1 > T[i]){
+                if(arr[i] > arr[j]){ //check if element is greater
+                    if(T[j] + 1 > T[i]){ //if length is greater
                         T[i] = T[j] + 1;
                         //set the actualSolution to point to guy before me
                         actualSolution[i] = j;
